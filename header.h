@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 15:40:48 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 16:27:48 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		malloc_stacks(t_all *data, int ac);
 void	fill_stack(int *tab, int ac,char **av);
 void	print_stack(t_all *data);
 int		ckeck_duplicates(int *tab, int size);
+void	line_value(t_all *data);
 
 void	pa(t_all *data);
 void	pb(t_all *data);
