@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 14:49:42 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 14:50:23 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 17:22:54 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ void	rrb(t_all *data)
 		i++;
 	}
 	data->stack_b.tab[data->stack_b.size - 1] = temp1;
+	data->count++;
 
 }
