@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:47:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 10:27:15 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 15:53:00 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int is_sort(int *tab, int len)
 	i = 1;
 	while (i < len)
 	{
-		if(tab[i - 1] < tab[i])
+		if(tab[i - 1] > tab[i])
 			return (-1);
 		i++;
 	}
-	return (0);
+	return (1);
 }
 
 int	ckeck_duplicates(int *tab, int size)

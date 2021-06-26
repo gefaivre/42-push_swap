@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 05:52:16 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 14:34:20 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 14:11:25 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,21 @@ void	print_stack(t_all *data)
 {
 	int i;
 
-	i = data->stack_a.size - 1;
+	i = data->size - 1;
 	while (i >= 0)
 	{
-		printf("\t\t%i  |  %i\n",data->stack_a.tab[i], data->stack_b.tab[i]);
+		printf("\t\t");
+		if (i < data->stack_a.size)
+			printf("%i",data->stack_a.tab[i]);
+		else
+			printf(".");
+		printf("\t|\t");
+		if (i < data->stack_b.size)
+			printf("%i",data->stack_b.tab[i]);
+		else
+			printf(".");
+		printf("\n");
+
 		i--;
 	}
 }

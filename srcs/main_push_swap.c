@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:20:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 14:37:19 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 15:51:13 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,20 @@ int main(int ac, char **av)
 		ft_free(&data);
 		return (-1);
 	}
+	print_stack(&data);
+	printf("\n\n");
+	int temp = data.stack_a.size;
 
-	ra(&data);
+	for(int i = 0;i <= temp/2 - 1;i++)
+		pb(&data);
+
+
+	print_stack(&data);
+	printf("\n\n");
+
+
+	sa(&data);
+	sa(&data);
 
 	print_stack(&data);
 	ft_free(&data);

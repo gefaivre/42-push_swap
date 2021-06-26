@@ -24,12 +24,14 @@ FLAGS = -Wall -Wextra -Werror
 
 $(NAME_P):
 	$(CC) $(FLAGS) -o $(NAME_P) libft/libft.a $(SRCS_P)
-$(NAME_T):
-	$(CC) $(FLAGS) -o $(NAME_T) libft/libft.a $(SRCS_T)
+
 lib:
 	$(MAKE) -C libft
 
-all : lib $(NAME_P) $(NAME_T)
+all : $(NAME_P)
+
+check:
+	$(CC) $(FLAGS) -o $(NAME_T) libft/libft.a $(SRCS_T)
 
 
 clean :

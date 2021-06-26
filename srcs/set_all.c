@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 14:17:18 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 14:00:23 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ void	set_var(t_all *data, int ac)
 {
 	data->stack_a.tab = NULL;
 	data->stack_b.tab = NULL;
-	data->stack_a.size = ac - 1;
-	data->stack_b.size = ac - 1;
+	data->size = ac -1;
+	data->stack_a.size = data->size;
+	data->stack_b.size = 0;
+
 }
 
 int		malloc_stacks(t_all *data, int ac)

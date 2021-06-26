@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 14:20:15 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/26 15:40:48 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ typedef struct	s_all
 {
 	t_stack	stack_a;
 	t_stack	stack_b;
+	int		size;
+	char	*line;
 }				t_all;
 
 int		is_sort(int *tab, int len);
@@ -50,6 +52,9 @@ void	rr(t_all *data);
 void	sa(t_all *data);
 void	sb(t_all *data);
 void	ss(t_all *data);
+void	rra(t_all *data);
+void	rrb(t_all *data);
+void	rrr(t_all *data);
 
 
 #endif
