@@ -8,7 +8,8 @@ SRCS_P =	srcs/check.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/rules/*.c \
-			srcs/solver.c
+			srcs/solver.c \
+			srcs/utils1.c
 
 SRCS_T =	srcs/check.c \
 			srcs/main_checker.c \
@@ -17,7 +18,9 @@ SRCS_T =	srcs/check.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/rules/*.c \
-			srcs/solver.c
+			srcs/solver.c \
+			srcs/utils1.c
+
 
 
 

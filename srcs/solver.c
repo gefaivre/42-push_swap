@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 16:51:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 18:02:41 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/28 11:49:34 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int		find_min_pos(int *tab, int size)
 	}
 	return (min_pos);
 }
-
 
 void solver(t_all *data)
 {

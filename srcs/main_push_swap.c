@@ -6,11 +6,13 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:20:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 17:24:19 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/06/28 14:50:40 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
+
+
 
 int main(int ac, char **av)
 {
@@ -21,7 +23,17 @@ int main(int ac, char **av)
 		return (-1);
 	}
 
-	solver(&data);
+	print_stack(&data);
+	printf("\n\n");
+
+	swap_in_stack_a(&data, 1, 2);
+	swap_in_stack_a(&data, 1, 7);
+
+	while (find_min_pos(data.stack_a.tab, data.stack_a.size) != 0)
+	{
+		ra(&data);
+	}
+
 
 
 	print_stack(&data);
