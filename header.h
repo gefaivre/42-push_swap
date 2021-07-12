@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/28 13:52:23 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/12 10:42:48 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ typedef struct	s_all
 	int		size;
 	char	*line;
 	int		count;
+	int		**chunk;
+	int		*chunk_stack;
+	int		nb_chunk;
 }				t_all;
 
 int		is_sort(int *tab, int len);
@@ -46,11 +49,10 @@ void	print_stack(t_all *data);
 int		ckeck_duplicates(int *tab, int size);
 void	line_value(t_all *data);
 int		find_min_pos(int *tab, int size);
+void	print_chunk_stack(t_all *data);
 
 
 void solver(t_all *data);
-
-void	swap_in_stack_a(t_all *data, int pos1, int pos2);
 
 
 void	pa(t_all *data);

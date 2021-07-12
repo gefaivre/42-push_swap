@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 17:21:44 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/12 08:17:43 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int		malloc_stacks(t_all *data, int ac)
 {
 	data->stack_a.tab = malloc(sizeof(int) * ac - 1);
 	data->stack_b.tab = malloc(sizeof(int) * ac - 1);
-	if (!data->stack_a.tab || !data->stack_b.tab)
+	data->chunk_stack = malloc(sizeof(int) * ac - 1);
+	if (!data->stack_a.tab || !data->stack_b.tab || !data->chunk_stack)
 		return (-1);
 	return (0);
 }
@@ -68,6 +69,7 @@ int	ft_set(t_all *data, int ac, char **av)
 	if (malloc_stacks(data, ac) == -1)
 		return (-1);
 	fill_stack(data->stack_a.tab,ac , av);
+	fill_stack(data->chunk_stack,ac , av);
 	if (ckeck_duplicates(data->stack_a.tab, data->stack_a.size))
 		return (-1);
 

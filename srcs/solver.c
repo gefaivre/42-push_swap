@@ -6,11 +6,75 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 16:51:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/28 11:49:34 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/12 12:33:07 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
+
+int	is_in_chunk(int nb, int *tab, int size)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+		if (i == tab[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+
+int better_nb(t_all *data)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (i > 0)
+	{
+		if (is_in_chunk(data->chunk_stack[i], data->chunk[j], 10))
+			j = i;
+		i--;
+	}
+	i = 0;
+	while (!is_in_chunk(data->chunk_stack[i], data->chunk[j], 10))
+		i++;
+	if (data->size - j < i)
+		return (j);
+	else
+	return (i);
+
+}
+
+void	push_chunk_to_b(t_all *data)
+{
+	int i;
+
+	i = 0;
+	while (i < 10)
+	{
+		better_nb(t_all *data);
+		i++;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 int		find_min_pos(int *tab, int size)
