@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/12 08:17:43 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/13 09:16:14 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,15 @@ int		malloc_stacks(t_all *data, int ac)
 void	fill_stack(int *tab, int ac,char **av)
 {
 	int i;
+	int y;
 
-	i = 0;
-	while (i < ac - 1)
+	i = ac - 2;
+	y = 0;
+	while (i >= 0)
 	{
-		tab[i] = atoi(av[i + 1]);
-		i++;
+		tab[y] = atoi(av[i + 1]);
+		i--;
+		y++;
 	}
 }
 

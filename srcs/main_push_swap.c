@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:20:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/12 10:57:57 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/13 17:23:03 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ void	set_chunk(t_all *data)
 }
 
 
-
 void	sort(t_all *data)
 {
 	malloc_chunk(data);
@@ -100,13 +99,15 @@ int main(int ac, char **av)
 		return (-1);
 	}
 
-/* 	print_stack(&data);
-	printf("\n\n"); */
+	print_stack(&data);
+	printf("\n\n");
 
 	sort(&data);
+	/* rra(&data); */
 
-	/* print_stack(&data);
-	printf("\n\n"); */
+
+	print_stack(&data);
+	printf("\n\n");
 
 	printf("data.count\t=\t[%d]\n", data.count);
 	ft_free(&data);

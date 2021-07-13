@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 10:57:15 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 17:22:18 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/13 09:10:33 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,4 @@ void	pa(t_all *data)
 		data->stack_a.size++;
 		data->count++;
 	}
-
 }
