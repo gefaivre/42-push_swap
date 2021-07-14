@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 16:51:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/13 17:59:10 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/14 14:39:43 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,35 @@ int put_on_top(t_all *data, int chunk)
 	}
 	return (0);
 }
+
+int 	is_max(int nb, int *tab, int size)
+{
+	int i;
+
+	i = 0;
+	while ( i < size)
+	{
+		if (nb <= tab[i])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int 	is_min(int nb, int *tab, int size)
+{
+	int i;
+
+	i = 0;
+	while ( i < size)
+	{
+		if (nb >= tab[i])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 void	push_chunk_to_b(t_all *data)
 {
 	int i;
@@ -71,26 +100,55 @@ void	push_chunk_to_b(t_all *data)
 
 	i = 0;
 	j = 0;
-	while (i < 4)
+	while (i < /* data->size */5)
 	{
+		printf("--------------------------------------------------------\n");
+		printf("j\t=\t[%d]\n", j);
+
 		put_on_top(data, j);
-		print_stack(data);
 		k = data->stack_b.size;
 		printf("data->stack_a.size - 1\t=\t[%d]\n", data->stack_a.size - 1);
+		printf("data->stack_a.tab[data->stack_a.size - 1]\t=\t[%d]\n", data->stack_a.tab[data->stack_a.size - 1]);
 		printf("k \t=\t[%d]\n", k);
-		while (data->stack_a.tab[data->stack_a.size - 1] < data->stack_b.tab[k - 1] && k > 1)
-		{
-			printf("rb\n");
-			rb(data);
-			k--;
-		}
+		print_stack(data);
+		printf("data->stack_b.tab[0]\t=\t[%d]\n", data->stack_b.tab[0]);
+		printf("is_max\t=\t[%d]\n", is_max(data->stack_a.tab[data->stack_a.size - 1], data->stack_b.tab, data->stack_b.size));
+		printf("top_a plus grand que top_b\t=\t[!%d]\n", (data->stack_a.tab[data->stack_a.size - 1] > data->stack_b.tab[k - 1]));
+		printf("top_a plus petit que min_b\t=\t[!%d]\n", (data->stack_a.tab[data->stack_a.size - 1] < data->stack_b.tab[0]));
+		if (k > 1 && !is_max(data->stack_a.tab[data->stack_a.size - 1], data->stack_b.tab, data->stack_b.size)
+			&& !is_min(data->stack_a.tab[data->stack_a.size - 1], data->stack_b.tab, data->stack_b.size))
+			while ((!(data->stack_a.tab[data->stack_a.size - 1] > data->stack_b.tab[k - 1])
+				&& !(data->stack_a.tab[data->stack_a.size - 1] < data->stack_b.tab[0])) &&  k > 0)
+			{
+				rb(data);
+				printf("rb\n");
+				printf("top_a plus grand que top_b\t=\t[!%d]\n", (data->stack_a.tab[data->stack_a.size - 1] > data->stack_b.tab[k - 1]));
+				printf("top_a plus petit que min_b\t=\t[!%d]\n", (data->stack_a.tab[data->stack_a.size - 1] < data->stack_b.tab[0]));
+				printf("k\t\t\t\t=\t[%d]\n", k);
+
+
+				k--;
+			}
+
 		pb(data);
 		i++;
-		if (i % 10 == 0)
+		if (k == 1 && data->stack_b.tab[1] < data->stack_b.tab[0])
+		{
+			printf("data->stack_b.tab[1]\t=\t[%d]\n", data->stack_b.tab[1]);
+			printf("<\n");
+			printf("data->stack_b.tab[0]\t=\t[%d]\n", data->stack_b.tab[0]);
+			rb(data);
+		}
+		if (is_min(data->stack_b.tab[data->stack_b.size - 1], data->stack_b.tab, data->stack_b.size - 1))
+			rb(data);
+	if (i % 10 == 0)
 		{
 
 			j++;
 		}
+	print_stack(data);
+		printf("--------------------------------------------------------\n");
+
 	}
 	/* pb(data); */
 
