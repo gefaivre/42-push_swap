@@ -6,29 +6,29 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 05:52:16 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/13 10:01:31 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/15 11:28:42 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-void	print_stack(t_all *data)
+void	print_stack(t_all *s)
 {
 	int i;
 
-	i = data->size - 1;
+	i = s->size - 1;
 	printf("\n\n");
 	while (i >=0)
 	{
 		printf("\t\t");
 		printf("[%d]\t", i);
-		if (i < data->stack_a.size)
-			printf("%i",data->stack_a.tab[i]);
+		if (i < s->stack_a.size)
+			printf("%i",s->stack_a.tab[i]);
 		else
 			printf(".");
 		printf("\t|\t");
-		if (i < data->stack_b.size)
-			printf("%i",data->stack_b.tab[i]);
+		if (i < s->stack_b.size)
+			printf("%i",s->stack_b.tab[i]);
 		else
 			printf(".");
 		printf("\n");
@@ -36,23 +36,4 @@ void	print_stack(t_all *data)
 		i--;
 	}
 	printf("\n\n");
-}
-
-void	print_chunk_stack(t_all *data)
-{
-	int i;
-	int y;
-
-	i = 0;
-	while (i < data->nb_chunk)
-	{
-		y = 0;
-		while (y < 10)
-		{
-			printf("data->chunk[%i][%i]\t=\t[%d]\n",i,y, data->chunk[i][y]);
-			y++;
-		}
-		i++;
-	}
-
 }

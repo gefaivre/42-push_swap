@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 04:45:18 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 09:45:54 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/26 09:09:36 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int is_int(char *str)
 	return (0);
 }
 
-int	all_params_is_int(char **av)
+void	all_params_is_int(t_all *s, char **av)
 {
 	int i;
 
@@ -72,8 +72,7 @@ int	all_params_is_int(char **av)
 	while (av[i])
 	{
 		if (is_int(av[i]) == -1)
-			return (-1);
+			ft_quit(s, "");
 	i++;
 	}
-	return (0);
 }

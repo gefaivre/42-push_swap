@@ -6,16 +6,18 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:35:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/25 04:44:46 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/26 09:07:25 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-void	ft_free(t_all *data)
+void	ft_quit(t_all *s, char *str)
 {
-	if (data->stack_a.tab)
-		free(data->stack_a.tab);
-	if (data->stack_b.tab)
-		free(data->stack_b.tab);
+	ft_putstr_fd(str, 1);
+	if (s->stack_a.tab)
+		free(s->stack_a.tab);
+	if (s->stack_b.tab)
+		free(s->stack_b.tab);
 }
+

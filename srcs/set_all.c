@@ -6,32 +6,29 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/13 09:16:14 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/28 16:06:57 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-void	set_var(t_all *data, int ac)
+void	set_var(t_all *s, int ac)
 {
-	data->stack_a.tab = NULL;
-	data->stack_b.tab = NULL;
-	data->size = ac -1;
-	data->stack_a.size = data->size;
-	data->stack_b.size = 0;
-	data->count = 0;
-
-
-
+	s->stack_a.tab = NULL;
+	s->stack_b.tab = NULL;
+	s->size = ac -1;
+	s->stack_a.size = s->size;
+	s->stack_b.size = 0;
+	s->count = 0;
+	s->div = 0;
 }
 
-int		malloc_stacks(t_all *data, int ac)
+int		malloc_stacks(t_all *s, int ac)
 {
-	data->stack_a.tab = malloc(sizeof(int) * ac - 1);
-	data->stack_b.tab = malloc(sizeof(int) * ac - 1);
-	data->chunk_stack = malloc(sizeof(int) * ac - 1);
-	if (!data->stack_a.tab || !data->stack_b.tab || !data->chunk_stack)
-		return (-1);
+	s->stack_a.tab = malloc(sizeof(int) * ac - 1);
+	s->stack_b.tab = malloc(sizeof(int) * ac - 1);
+	if (!s->stack_a.tab || !s->stack_b.tab)
+		ft_quit(s, "malloc foire");
 	return (0);
 }
 
@@ -62,21 +59,13 @@ void	fill_void_stack(int *tab, int ac,char c)
 	}
 }
 
-int	ft_set(t_all *data, int ac, char **av)
+void	ft_set(t_all *s, int ac, char **av)
 {
-	if (ac <= 1)
-		return (-1);
-	set_var(data, ac);
-	if (all_params_is_int(av) == -1)
-		return (-1);
-	if (malloc_stacks(data, ac) == -1)
-		return (-1);
-	fill_stack(data->stack_a.tab,ac , av);
-	fill_stack(data->chunk_stack,ac , av);
-	if (ckeck_duplicates(data->stack_a.tab, data->stack_a.size))
-		return (-1);
-
-	return (0);
+	set_var(s, ac);
+	all_params_is_int(s, av);
+	malloc_stacks(s, ac);
+	fill_stack(s->stack_a.tab,ac , av);
+	ckeck_duplicates(s, s->stack_a.tab, s->stack_a.size);
 }
 
 

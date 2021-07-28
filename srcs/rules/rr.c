@@ -6,15 +6,15 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 13:43:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/28 12:35:56 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/15 11:09:59 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header.h"
 
-void	rr(t_all *data)
+void	rr(t_all *s)
 {
-	ra(data);
-	rb(data);
-	data->count--;
+	ra(s);
+	rb(s);
+	s->count--;
 }

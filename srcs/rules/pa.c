@@ -6,19 +6,19 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 10:57:15 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/13 09:10:33 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/15 11:09:59 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header.h"
 
-void	pa(t_all *data)
+void	pa(t_all *s)
 {
-	if (data->stack_b.size > 0)
+	if (s->stack_b.size > 0)
 	{
-		data->stack_a.tab[data->stack_a.size] = data->stack_b.tab[data->stack_b.size - 1];
-		data->stack_b.size--;
-		data->stack_a.size++;
-		data->count++;
+		s->stack_a.tab[s->stack_a.size] = s->stack_b.tab[s->stack_b.size - 1];
+		s->stack_b.size--;
+		s->stack_a.size++;
+		s->count++;
 	}
 }

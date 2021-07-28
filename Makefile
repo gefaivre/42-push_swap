@@ -8,7 +8,7 @@ SRCS_P =	srcs/check.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/rules/*.c \
-			srcs/solver.c
+			srcs/big_sort.c
 
 
 SRCS_T =	srcs/check.c \
@@ -18,7 +18,7 @@ SRCS_T =	srcs/check.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/rules/*.c \
-			srcs/solver.c
+			srcs/big_sort.c
 
 
 
@@ -40,12 +40,10 @@ check:
 
 
 clean :
-	rm -rf $(SURPL_O)
-	#$(MAKE) -C libft clean
+	rm -rf *.o
 
 fclean : clean
-	rm -rf $(NAME_P)
-	#rm -rf libft/libft.a
+	rm -rf $(NAME_P) $(NAME_T)
 
 re : fclean all
 

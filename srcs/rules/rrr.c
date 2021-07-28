@@ -6,14 +6,14 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 14:51:33 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 17:23:17 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/15 11:09:59 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header.h"
 
-void	rrr(t_all *data)
+void	rrr(t_all *s)
 {
-	rra(data);
-	rrb(data);
+	rra(s);
+	rrb(s);
 }

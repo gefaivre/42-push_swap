@@ -6,22 +6,22 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 10:32:36 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/06/26 17:23:02 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/15 11:09:59 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../header.h"
 
-void	sa(t_all *data)
+void	sa(t_all *s)
 {
 	int temp;
 
-	if (data->stack_a.size > 1)
+	if (s->stack_a.size > 1)
 	{
-		temp = data->stack_a.tab[data->stack_a.size - 1];
-		data->stack_a.tab[data->stack_a.size - 1] = data->stack_a.tab[data->stack_a.size - 2];
-		data->stack_a.tab[data->stack_a.size - 2] = temp;
+		temp = s->stack_a.tab[s->stack_a.size - 1];
+		s->stack_a.tab[s->stack_a.size - 1] = s->stack_a.tab[s->stack_a.size - 2];
+		s->stack_a.tab[s->stack_a.size - 2] = temp;
 	}
-	data->count++;
+	s->count++;
 
 }

@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/13 08:18:50 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/28 14:03:58 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,41 +32,43 @@ typedef struct	s_all
 	int		size;
 	char	*line;
 	int		count;
-	int		**chunk;
-	int		*chunk_stack;
-	int		nb_chunk;
+	int		div;
+	int		init_med;
+	int		a_med_val;
+	int		b_med_val;
+	int		max;
+	int		min;
+	int		max_b;
 }				t_all;
 
 int		is_sort(int *tab, int len);
-void	ft_free(t_all *data);
+void	ft_quit(t_all *s, char *str);
 void	set_all(t_all *s);
 void	check(t_all *s, char **av);
-int		all_params_is_int(char **av);
-int		ft_set(t_all *data, int ac, char **av);
-int		malloc_stacks(t_all *data, int ac);
+void	all_params_is_int(t_all *s, char **av);
+void	ft_set(t_all *s, int ac, char **av);
+int		malloc_stacks(t_all *s, int ac);
 void	fill_stack(int *tab, int ac,char **av);
-void	print_stack(t_all *data);
-int		ckeck_duplicates(int *tab, int size);
-void	line_value(t_all *data);
+void	print_stack(t_all *s);
+void	ckeck_duplicates(t_all *s, int *tab, int size);
+void	line_value(t_all *s);
 int		find_min_pos(int *tab, int size);
-void	print_chunk_stack(t_all *data);
-void	push_chunk_to_b(t_all *data);
+void	print_chunk_stack(t_all *s);
+void	push_chunk_to_b(t_all *s);
 
+void	big_sort(t_all *s);
 
-void solver(t_all *data);
-
-
-void	pa(t_all *data);
-void	pb(t_all *data);
-void	ra(t_all *data);
-void	rb(t_all *data);
-void	rr(t_all *data);
-void	sa(t_all *data);
-void	sb(t_all *data);
-void	ss(t_all *data);
-void	rra(t_all *data);
-void	rrb(t_all *data);
-void	rrr(t_all *data);
+void	pa(t_all *s);
+void	pb(t_all *s);
+void	ra(t_all *s);
+void	rb(t_all *s);
+void	rr(t_all *s);
+void	sa(t_all *s);
+void	sb(t_all *s);
+void	ss(t_all *s);
+void	rra(t_all *s);
+void	rrb(t_all *s);
+void	rrr(t_all *s);
 
 
 #endif
