@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 05:52:16 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/15 11:28:42 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/07/29 17:55:57 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	print_stack(t_all *s)
 	int i;
 
 	i = s->size - 1;
-	printf("\n\n");
 	while (i >=0)
 	{
 		printf("\t\t");
@@ -35,5 +34,7 @@ void	print_stack(t_all *s)
 
 		i--;
 	}
-	printf("\n\n");
+	printf("\n\n\n");
+	/* printf("\033c"); */
+	usleep(100000);
 }
