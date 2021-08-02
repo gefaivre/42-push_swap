@@ -8,7 +8,9 @@ SRCS_P =	srcs/check.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/rules/*.c \
-			srcs/big_sort.c
+			srcs/big_sort.c \
+			srcs/push_all_med_to_b.c \
+			srcs/push_all_med_to_a.c
 
 
 SRCS_T =	srcs/check.c \
@@ -18,7 +20,9 @@ SRCS_T =	srcs/check.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/rules/*.c \
-			srcs/big_sort.c
+			srcs/big_sort.c \
+			srcs/push_all_med_to_b.c \
+			srcs/push_all_med_to_a.c
 
 
 
