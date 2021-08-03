@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/02 15:14:31 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/03 17:09:53 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,9 @@ void	big_sort(t_all *s);
 void	opti_pb(t_all *s, int num, int med_size);
 void	push_all_med_to_b(t_all *s, int med_size);
 int		num_pos(int *tab, int size, int num);
-int		first_in_med(int *tab, int size, int med_size);
+int		first_in_med(int *tab, int size, int med_size, int swap);
 void	push_all_med_to_a(t_all *s, int med_size);
+int		is_min(int nb, int *tab, int size);
 
 void	pa(t_all *s);
 void	pb(t_all *s);

@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:11:53 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/02 16:30:13 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/03 15:57:28 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	opti_pa(t_all *s, int num, int med_size)
 {
 	print_stack(s);
-	if (num_pos(s->stack_b.tab, s->stack_b.size, num) > s->size / med_size)
+	if (num_pos(s->stack_b.tab, s->stack_b.size, num) > s->stack_b.size / med_size)
 		while (s->stack_b.tab[s->stack_b.size - 1] != num)
 		{
 			rrb(s);
@@ -35,11 +35,18 @@ void	push_med_a(t_all *s, int med_size)
 
 	nb_by_med_t = s->stack_b.size / med_size;
 	nb_by_med = nb_by_med_t;
-	if (s->stack_b.size == 1)
-		pa(s);
+	if (s->stack_b.size <= med_size)
+	{
+		while (s->stack_b.size > 0)
+		{
+			pa(s);
+		}
+		return;
+	}
+
 	while (nb_by_med > 0)
 	{
-		opti_pa(s, first_in_med(s->stack_b.tab, s->stack_b.size, nb_by_med), med_size);
+		opti_pa(s, first_in_med(s->stack_b.tab, s->stack_b.size, nb_by_med, 2), med_size);
 		nb_by_med--;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:47:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/26 09:06:32 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/03 17:12:35 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,22 @@ void	ckeck_duplicates(t_all *s, int *tab, int size)
 		}
 		i++;
 	}
+}
+
+int is_min(int nb, int *tab, int size)
+{
+	int i;
+
+	i = 0;
+	while (i < size)
+	{
+			if (tab[i] < nb)
+			{
+				printf("nb\t=\t[%d]\n", nb);
+				printf("tab[i]\t=\t[%d]\n", tab[i]);
+				return (0);
+			}
+		i++;
+	}
+	return (1);
 }

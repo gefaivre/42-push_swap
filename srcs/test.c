@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 05:52:16 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/02 15:16:25 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/03 17:56:38 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	print_stack(t_all *s)
 	}
 	printf("\n\n\n");
 	/* printf("\033c"); */
-	usleep(30000);
+	usleep(1000);
 }
