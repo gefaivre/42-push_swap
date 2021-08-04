@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:47:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/03 17:12:35 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/04 15:27:03 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int is_sort(int *tab, int len)
 	i = 1;
 	while (i < len)
 	{
-		if(tab[i - 1] > tab[i])
+		if(tab[i - 1] < tab[i])
 			return (-1);
 		i++;
 	}
@@ -74,14 +74,14 @@ void	ckeck_duplicates(t_all *s, int *tab, int size)
 	}
 }
 
-int is_min(int nb, int *tab, int size)
+int is_min(int nb, int *tab, int size, int old_min)
 {
 	int i;
 
 	i = 0;
 	while (i < size)
 	{
-			if (tab[i] < nb)
+			if (nb > tab[i] && nb < old_min)
 			{
 				printf("nb\t=\t[%d]\n", nb);
 				printf("tab[i]\t=\t[%d]\n", tab[i]);
