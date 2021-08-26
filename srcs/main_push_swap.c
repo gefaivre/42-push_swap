@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:20:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/28 14:06:55 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:22:51 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int main(int ac, char **av)
 	if (ac <= 2)
 		ft_quit(&s, "ac < 2");
 	ft_set(&s, ac, av);
-	printf("\n\n");
 	if (s.size < 3)
 		printf("size < 3\n");
 	else if (s.size < 10)
@@ -27,10 +26,9 @@ int main(int ac, char **av)
 	else
 		big_sort(&s);
 
-	print_stack(&s);
-	printf("\n\n");
-	printf("s.count\t=\t[%d]\n", s.count);
-	ft_quit(&s, "end");
+	/* print_stack(&s); */
+	/* printf("s.count\t=\t[%d]\n", s.count); */
+	ft_quit(&s, "");
 	return (0);
 }
 

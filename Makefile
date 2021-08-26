@@ -47,7 +47,7 @@ clean :
 	rm -rf *.o
 
 fclean : clean
-	rm -rf $(NAME_P) $(NAME_T)
+	rm -rf $(NAME_P)
 
 re : fclean all
 

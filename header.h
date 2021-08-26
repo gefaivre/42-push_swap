@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/04 15:14:07 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/26 14:06:56 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,17 @@ typedef struct	s_stack
 	int size;
 }				t_stack;
 
+typedef struct	s_next_min
+{
+	char	tab;
+	int		val;
+}				t_next_min;
+
 typedef struct	s_all
 {
 	t_stack	stack_a;
 	t_stack	stack_b;
+	t_next_min next_min;
 	int		size;
 	char	*line;
 	int		count;

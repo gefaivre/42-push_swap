@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:47:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/04 15:27:03 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:16:26 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int is_sort(int *tab, int len)
 	while (i < len)
 	{
 		if(tab[i - 1] < tab[i])
-			return (-1);
+			return (0);
 		i++;
 	}
 	return (1);
@@ -83,8 +83,8 @@ int is_min(int nb, int *tab, int size, int old_min)
 	{
 			if (nb > tab[i] && nb < old_min)
 			{
-				printf("nb\t=\t[%d]\n", nb);
-				printf("tab[i]\t=\t[%d]\n", tab[i]);
+				/* printf("nb\t=\t[%d]\n", nb);
+				printf("tab[i]\t=\t[%d]\n", tab[i]); */
 				return (0);
 			}
 		i++;

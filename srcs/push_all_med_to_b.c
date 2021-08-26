@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:05:23 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/03 16:35:58 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/26 16:21:29 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	opti_pb(t_all *s, int num, int med_size)
 {
-	print_stack(s);
 	if (num_pos(s->stack_a.tab, s->stack_a.size, num) > s->stack_a.size / med_size)
 		while (s->stack_a.tab[s->stack_a.size - 1] != num)
 		{
@@ -42,6 +41,8 @@ void	push_med_b(t_all *s, int med_size)
 	{
 		opti_pb(s, first_in_med(s->stack_a.tab, s->stack_a.size, nb_by_med, 1), med_size);
 		nb_by_med--;
+
+
 	}
 }
 
@@ -49,9 +50,10 @@ void	push_all_med_to_b(t_all *s, int med_size)
 {
 	if (s->size <= 100)
 	{
-		while (s->stack_a.size > 0)
+		while (s->stack_a.size > s->size/5)
 		{
 			push_med_b(s, med_size);
+
 		}
 	}
 }
