@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 05:52:16 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/26 15:46:16 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/03 12:29:40 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ void	print_stack(t_all *s)
 			printf("/\t");
 
 
-
 		for(int y = 0; y < s->size; y++)
 			if(y < s->stack_a.tab[i] && i < s->stack_a.size)
-				printf(".");
+				printf("\033[0;33m.\033[0m");
+			else if (y < abs(s->stack_a.tab[i]) && i < s->stack_a.size)
+				printf("\033[0;34m.\033[0m");
 			else
 				printf(" ");
 
 
-		printf("|");
-		printf("[%d]\t", i);
+		printf("\t[%d]\t", i);
 
 		if(i < s->stack_b.size)
 			printf("%i\t",s->stack_b.tab[i]);
@@ -44,7 +44,9 @@ void	print_stack(t_all *s)
 			printf("/\t");
 		for(int y = 0; y < s->size; y++)
 			if(y < s->stack_b.tab[i] && i < s->stack_b.size)
-				printf(".");
+				printf("\033[0;33m.\033[0m");
+			else if (y < abs(s->stack_b.tab[i]) && i < s->stack_b.size)
+				printf("\033[0;34m.\033[0m");
 			else
 				printf(" ");
 		printf("\n");
@@ -52,5 +54,5 @@ void	print_stack(t_all *s)
 		i--;
 	}
 	printf("\n\n\n");
-	usleep(50000);
+	usleep(45000);
 }

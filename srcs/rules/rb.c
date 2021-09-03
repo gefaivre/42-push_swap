@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 13:39:53 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/26 16:21:14 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/03 16:19:46 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	rb(t_all *s)
 	}
 	s->stack_b.tab[0] = temp1;
 	s->count++;
-	printf("RB\n");
+	printf("rb\n");
 	/* print_stack(s); */
 
 }

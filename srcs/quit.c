@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:35:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/26 09:07:25 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/08/27 12:52:33 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	ft_quit(t_all *s, char *str)
 		free(s->stack_a.tab);
 	if (s->stack_b.tab)
 		free(s->stack_b.tab);
+	exit(0);
 }
 

@@ -10,7 +10,8 @@ SRCS_P =	srcs/check.c \
 			srcs/rules/*.c \
 			srcs/big_sort.c \
 			srcs/push_all_med_to_b.c \
-			srcs/push_all_med_to_a.c
+			srcs/push_all_med_to_a.c \
+			srcs/first_in_med.c
 
 
 SRCS_T =	srcs/check.c \
@@ -22,7 +23,8 @@ SRCS_T =	srcs/check.c \
 			srcs/rules/*.c \
 			srcs/big_sort.c \
 			srcs/push_all_med_to_b.c \
-			srcs/push_all_med_to_a.c
+			srcs/push_all_med_to_a.c \
+			srcs/first_in_med.c
 
 
 

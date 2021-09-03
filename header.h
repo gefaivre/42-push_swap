@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/26 14:06:56 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/01 15:21:53 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,18 @@ typedef struct	s_stack
 	int size;
 }				t_stack;
 
-typedef struct	s_next_min
+typedef struct	s_min
 {
 	char	tab;
 	int		val;
-}				t_next_min;
+}				t_min;
 
 typedef struct	s_all
 {
 	t_stack	stack_a;
 	t_stack	stack_b;
-	t_next_min next_min;
+	t_min min;
+	t_min next_min;
 	int		size;
 	char	*line;
 	int		count;
@@ -44,7 +45,7 @@ typedef struct	s_all
 	int		a_med_val;
 	int		b_med_val;
 	int		max;
-	int		min;
+	int		min_val;
 	int		max_b;
 }				t_all;
 
@@ -66,11 +67,12 @@ void	push_chunk_to_b(t_all *s);
 void	big_sort(t_all *s);
 
 void	opti_pb(t_all *s, int num, int med_size);
-void	push_all_med_to_b(t_all *s, int med_size);
+void	push_all_med_to_b(t_all *s);
 int		num_pos(int *tab, int size, int num);
 int		first_in_med(int *tab, int size, int med_size, int swap);
-void	push_all_med_to_a(t_all *s, int med_size);
+void	push_all_med_to_a(t_all *s);
 int		is_min(int nb, int *tab, int size, int old_min);
+void	opti_pa(t_all *s, int num, int med_size);
 
 void	pa(t_all *s);
 void	pb(t_all *s);

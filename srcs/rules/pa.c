@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 10:57:15 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/26 16:20:22 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/03 16:19:46 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	pa(t_all *s)
 		s->stack_b.size--;
 		s->stack_a.size++;
 		s->count++;
-		printf("PA\n");
+		printf("pa\n");
 		/* print_stack(s); */
 	}
 }

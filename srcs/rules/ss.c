@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 10:53:33 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/26 16:21:04 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/03 16:19:46 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ void	ss(t_all *s)
 	sa_in_ss(s);
 	sb_in_ss(s);
 	s->count++;
-	printf("SS\n");
+	printf("ss\n");
 	/* print_stack(s); */
 }

@@ -6,11 +6,32 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/07/28 16:06:57 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/03 13:52:23 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
+
+void	ft_max(t_all *s)
+{
+	int max;
+	int i;
+
+	i = 0;
+	max = -2147483648;
+	while (i < s->size)
+	{
+		if (s->stack_a.tab[i] > max)
+			max = s->stack_a.tab[i];
+		i++;
+	}
+	s->max = max;
+}
+
+void	set_utils(t_all *s)
+{
+	ft_max(s);
+}
 
 void	set_var(t_all *s, int ac)
 {
@@ -66,6 +87,7 @@ void	ft_set(t_all *s, int ac, char **av)
 	malloc_stacks(s, ac);
 	fill_stack(s->stack_a.tab,ac , av);
 	ckeck_duplicates(s, s->stack_a.tab, s->stack_a.size);
+	set_utils(s);
 }
 
 

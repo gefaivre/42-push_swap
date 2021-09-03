@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 14:51:33 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/26 16:20:53 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/03 16:19:46 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ void	rrr(t_all *s)
 	rra_in_rrr(s);
 	rrb_in_rrr(s);
 	s->count++;
-	printf("RRR\n");
+	printf("rrr\n");
 	/* print_stack(s); */
 }
