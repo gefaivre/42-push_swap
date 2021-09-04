@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_push_swap.c                                   :+:      :+:    :+:   */
+/*   lib_fonction.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/24 21:20:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/04 22:51:40 by gefaivre         ###   ########.fr       */
+/*   Created: 2021/09/05 00:49:44 by gefaivre          #+#    #+#             */
+/*   Updated: 2021/09/05 00:52:10 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
 
-int main(int ac, char **av)
+int	ft_isdigit(int c)
 {
-	t_all s;
-
-	if (av[ac - 1][0] == '-' && av[ac - 1][1] == 'v')
-	{
-		ac = ac - 1;
-		s.verbose = 1;
-	}
+	if (c >= '0' && c <= '9')
+		return (1);
 	else
-		s.verbose = 0;
-
-
-	ft_set(&s, ac, av);
-	if (ac <= 2)
-		ft_quit(&s, "ac < 2");
-	if (s.size < 3)
-		printf("size < 3\n");
-	else if (s.size < 10)
-		printf("size < 10\n");
-	else
-		big_sort(&s);
-
-	if(s.verbose == 1)
-	{
-		print_stack(&s);
-		printf("s.count\t=\t[%d]\n", s.count);
-	}
-	ft_quit(&s, "");
-	return (0);
+		return (0);
 }
 
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+}
 
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
 
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
-
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	while ((*s1 || *s2) && n--)
+	{
+		if (*s1 != *s2)
+			return ((unsigned char)*s1 - (unsigned char)*s2);
+		s1++;
+		s2++;
+	}
+	return (0);
+}

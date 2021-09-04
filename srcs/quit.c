@@ -6,11 +6,14 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:35:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/08/27 12:52:33 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/04 21:24:56 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header.h"
+
+
+
 
 void	ft_quit(t_all *s, char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/30 16:43:22 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/03 16:23:21 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/05 00:52:42 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ int	first_in_med(int *tab, int size, int med_size, int swap)
 	printf("bot\t=\t[%d]\n", bot); */
 
 	/* if (swap == 1)
-		return (top);
-	if (size - num_pos(tab, size, top) > num_pos(tab, size, bot) && swap == 2)
+		return (top); */
+	/* if (size - num_pos(tab, size, top) > num_pos(tab, size, bot) )
 		return (bot); */
 	return (top);
 }

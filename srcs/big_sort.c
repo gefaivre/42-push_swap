@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 16:51:04 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/03 15:51:57 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/04 20:25:26 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,7 +146,7 @@ void	big_sort(t_all *s)
 
 	push_all_med_to_b(s);
 	push_all_med_to_a(s);
-	/* printf("PARTIE 3 !!!!!!!!!!!!!!!!!!!!!!!!!\n"); */
+	printf("PARTIE 3 !!!!!!!!!!!!!!!!!!!!!!!!!\n");
 	i = 0;
 	s->min.val = s->stack_a.tab[0];
 	while (i < s->stack_a.size)
@@ -187,7 +187,6 @@ void	big_sort(t_all *s)
 			ra(s);
 		s->min.tab = s->next_min.tab;
 		s->min.val = s->next_min.val;
-	/* 	usleep(1000000); */
-	i++;
+		i++;
 	}
 }

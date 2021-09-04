@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/01 15:21:53 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/05 00:55:40 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft/libft.h"
+#include <unistd.h>
+
 #define INT_MAX 2147483647
 #define INT_MIN -2147483648
+
 
 typedef struct	s_stack
 {
@@ -47,13 +49,14 @@ typedef struct	s_all
 	int		max;
 	int		min_val;
 	int		max_b;
+	int		verbose;
 }				t_all;
 
 int		is_sort(int *tab, int len);
 void	ft_quit(t_all *s, char *str);
 void	set_all(t_all *s);
 void	check(t_all *s, char **av);
-void	all_params_is_int(t_all *s, char **av);
+void	all_params_is_int(t_all *s, char **av, int ac);
 void	ft_set(t_all *s, int ac, char **av);
 int		malloc_stacks(t_all *s, int ac);
 void	fill_stack(int *tab, int ac,char **av);
@@ -73,6 +76,12 @@ int		first_in_med(int *tab, int size, int med_size, int swap);
 void	push_all_med_to_a(t_all *s);
 int		is_min(int nb, int *tab, int size, int old_min);
 void	opti_pa(t_all *s, int num, int med_size);
+
+
+int	ft_isdigit(int c);
+void	ft_putstr_fd(char *s, int fd);
+size_t	ft_strlen(const char *str);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 void	pa(t_all *s);
 void	pb(t_all *s);

@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 11:56:03 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/03 16:19:46 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/04 22:58:44 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ra(t_all *s)
 	s->stack_a.tab[0] = temp1;
 	s->count++;
 	printf("ra\n");
-	/* print_stack(s); */
+	if (s->verbose == 1)
+			print_stack(s);
 
 }

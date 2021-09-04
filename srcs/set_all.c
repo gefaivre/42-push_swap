@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/03 13:52:23 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/04 22:57:55 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,15 @@ void	fill_void_stack(int *tab, int ac,char c)
 void	ft_set(t_all *s, int ac, char **av)
 {
 	set_var(s, ac);
-	all_params_is_int(s, av);
+
+	all_params_is_int(s, av, ac);
+
 	malloc_stacks(s, ac);
+
 	fill_stack(s->stack_a.tab,ac , av);
+
 	ckeck_duplicates(s, s->stack_a.tab, s->stack_a.size);
+
 	set_utils(s);
 }
 

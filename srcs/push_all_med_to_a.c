@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 15:11:53 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/03 16:26:03 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/04 00:09:12 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void	push_med_a(t_all *s, int med_size,int min)
 	int nb_by_med;
 
 	nb_by_med = s->stack_b.size / med_size;
+	if (nb_by_med == 0)
+		nb_by_med = 1;
 	/* if (s->stack_b.size <= med_size)
 	{
 		while (s->stack_b.size > 0)
@@ -65,10 +67,11 @@ void	push_all_med_to_a(t_all *s)
 	{
 		min = 10;
 		med_size = 3;
-		while (s->stack_b.size > s->size - s->size/6)
+		while (s->stack_b.size > s->size - s->size/4)
 		{
-			push_med_a(s, 4, 0);
+			push_med_a(s, 100, 0);
 		}
+		/* printf("\033[0;32mFIN DE LA MOITIER\033[0m\n"); */
 		while (s->stack_b.size > min)
 		{
 			push_med_a(s, med_size, min);

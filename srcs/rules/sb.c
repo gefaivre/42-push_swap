@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 10:50:49 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/03 16:19:46 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/04 22:59:28 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	sb(t_all *s)
 	}
 	s->count++;
 	printf("sb\n");
-	/* print_stack(s); */
+	if (s->verbose == 1)
+		print_stack(s);
 
 }
