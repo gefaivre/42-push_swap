@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/05 00:55:40 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/06 00:45:00 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,20 +42,16 @@ typedef struct	s_all
 	int		size;
 	char	*line;
 	int		count;
-	int		div;
-	int		init_med;
-	int		a_med_val;
-	int		b_med_val;
 	int		max;
-	int		min_val;
-	int		max_b;
 	int		verbose;
+	int		min_a;
+	int		min_b;
+	int		i;
 }				t_all;
 
 int		is_sort(int *tab, int len);
-void	ft_quit(t_all *s, char *str);
+void	ft_quit(t_all *s, char *str, char *verbose);
 void	set_all(t_all *s);
-void	check(t_all *s, char **av);
 void	all_params_is_int(t_all *s, char **av, int ac);
 void	ft_set(t_all *s, int ac, char **av);
 int		malloc_stacks(t_all *s, int ac);
@@ -63,10 +59,12 @@ void	fill_stack(int *tab, int ac,char **av);
 void	print_stack(t_all *s);
 void	ckeck_duplicates(t_all *s, int *tab, int size);
 void	line_value(t_all *s);
-int		find_min_pos(int *tab, int size);
-void	print_chunk_stack(t_all *s);
-void	push_chunk_to_b(t_all *s);
+int		find_min(int *tab, int size);
+int		num_pos(int *tab, int size, int num);
+void		ft_max(t_all *s);
 
+void	mini_sort(t_all *s);
+void	medium_sort(t_all *s);
 void	big_sort(t_all *s);
 
 void	opti_pb(t_all *s, int num, int med_size);

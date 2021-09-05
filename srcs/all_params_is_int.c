@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 04:45:18 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/04 22:57:14 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/05 20:50:01 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	all_params_is_int(t_all *s, char **av, int ac)
 	while (y < ac)
 	{
 		if (is_int(av[i]) == -1)
-			ft_quit(s, "");
+			ft_quit(s, "", "");
 	i++;
 	y++;
 	}

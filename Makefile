@@ -8,6 +8,8 @@ SRCS_P =	srcs/check.c \
 			srcs/test.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
+			srcs/mini_sort.c \
+			srcs/medium_sort.c \
 			srcs/big_sort.c \
 			srcs/push_all_med_to_b.c \
 			srcs/push_all_med_to_a.c \
