@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 11:52:06 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/04 22:58:39 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:17:57 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	pb(t_all *s)
 		s->stack_a.size--;
 		s->stack_b.size++;
 		s->count++;
-		printf("pb\n");
-		if (s->verbose == 1)
-			print_stack(s);
+		ft_putstr_fd("pb\n", 1);
 	}
 }

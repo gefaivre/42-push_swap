@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 13:43:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/04 22:59:02 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:18:04 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ra_in_rr(t_all *s)
 {
-	int i;
-	int temp;
-	int temp1;
+	int	i;
+	int	temp;
+	int	temp1;
 
 	i = s->stack_a.size - 1;
 	temp1 = s->stack_a.tab[i];
@@ -32,9 +32,9 @@ void	ra_in_rr(t_all *s)
 
 void	rb_in_rr(t_all *s)
 {
-	int i;
-	int temp;
-	int temp1;
+	int	i;
+	int	temp;
+	int	temp1;
 
 	i = s->stack_b.size - 1;
 	temp1 = s->stack_b.tab[i];
@@ -53,7 +53,5 @@ void	rr(t_all *s)
 	ra_in_rr(s);
 	rb_in_rr(s);
 	s->count++;
-	printf("rr\n");
-	if (s->verbose == 1)
-			print_stack(s);
+	ft_putstr_fd("rr\n", 1);
 }

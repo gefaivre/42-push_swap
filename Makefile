@@ -5,7 +5,6 @@ FLAGS = -Wall -Wextra -Werror
 SRCS_P =	srcs/check.c \
 			srcs/main_push_swap.c \
 			srcs/quit.c \
-			srcs/test.c \
 			srcs/all_params_is_int.c \
 			srcs/set_all.c \
 			srcs/mini_sort.c \
@@ -15,6 +14,7 @@ SRCS_P =	srcs/check.c \
 			srcs/push_all_med_to_a.c \
 			srcs/first_in_med.c \
 			srcs/lib_fonction.c \
+			srcs/utils.c \
 			\
 			srcs/rules/pa.c \
 			srcs/rules/pb.c \
@@ -34,7 +34,7 @@ OBJS_P=$(SRCS_P:.c=.o)
 all:$(NAME_P)
 
 $(NAME_P): $(OBJS_P)
-	$(CC) $(FLAGS) -o $(NAME_P)  $(SRCS_P) -fsanitize=address
+	$(CC) $(FLAGS) -o $(NAME_P)  $(SRCS_P)
 
 clean:
 	rm -rf *.o

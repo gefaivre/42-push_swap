@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 04:45:18 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/07 15:08:33 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 17:04:41 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long long	ft_atol(const char *str)
 {
-	int		i;
-	int		neg;
+	int			i;
+	int			neg;
 	long long	res;
 
 	if (!str)
@@ -34,7 +34,7 @@ long long	ft_atol(const char *str)
 
 int	only_digit(char *str)
 {
-	int i;
+	int			i;
 
 	i = 0;
 	while (str[i])
@@ -48,16 +48,16 @@ int	only_digit(char *str)
 	return (0);
 }
 
-int is_int(char *str)
+int	is_int(char *str)
 {
-	long long res;
+	long long	res;
+
 	if (ft_strlen(str) > 11)
 		return (-1);
 	if (only_digit(str) == -1)
 	{
 		return (-1);
 	}
-
 	res = ft_atol(str);
 	if (res > INT_MAX || res < INT_MIN)
 		return (-1);
@@ -66,8 +66,8 @@ int is_int(char *str)
 
 void	all_params_is_int(t_all *s, char **av, int ac)
 {
-	int i;
-	int y;
+	int			i;
+	int			y;
 
 	i = 1;
 	y = 1;
@@ -75,7 +75,7 @@ void	all_params_is_int(t_all *s, char **av, int ac)
 	{
 		if (is_int(av[i]) == -1)
 			ft_quit(s, "Error", "");
-	i++;
-	y++;
+		i++;
+		y++;
 	}
 }

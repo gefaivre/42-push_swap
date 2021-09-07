@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 14:49:42 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/07 15:38:19 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 18:18:08 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	rrb(t_all *s)
 {
-	int i;
-	int temp;
-	int temp1;
+	int	i;
+	int	temp;
+	int	temp1;
 
 	i = 1;
 	temp1 = s->stack_b.tab[0];
@@ -32,9 +32,6 @@ void	rrb(t_all *s)
 		}
 		s->stack_b.tab[s->stack_b.size - 1] = temp1;
 		s->count++;
-		printf("rrb\n");
-		if (s->verbose == 1)
-			print_stack(s);
+		ft_putstr_fd("rrb\n", 1);
 	}
-
 }
