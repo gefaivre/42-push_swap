@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:20:47 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/06 00:48:21 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 15:39:51 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,14 @@ int main(int ac, char **av)
 		ft_quit(&s, "", "is sort");
 	}
 
+
+
+	/* print_stack(&s);
+	rrb(&s);
+	print_stack(&s); */
+
 	if (ac <= 2)
-		ft_quit(&s, "", "ac < 2");
+		ft_quit(&s, "Error", "ac < 2");
 	if (s.size <= 3)
 		mini_sort(&s);
 	else if (s.size <= 5)
@@ -49,7 +55,7 @@ int main(int ac, char **av)
 		print_stack(&s);
 		printf("s.count\t=\t[%d]\n", s.count);
 	}
-	ft_quit(&s, "", "");
+	ft_quit(&s, "", "END main");
 	return (0);
 }
 

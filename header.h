@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 21:19:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/06 00:45:00 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:31:14 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	print_stack(t_all *s);
 void	ckeck_duplicates(t_all *s, int *tab, int size);
 void	line_value(t_all *s);
 int		find_min(int *tab, int size);
+int		find_max(int *tab, int size);
 int		num_pos(int *tab, int size, int num);
 void		ft_max(t_all *s);
 

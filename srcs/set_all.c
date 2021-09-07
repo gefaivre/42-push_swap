@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:58:12 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/05 20:48:57 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 15:11:34 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		malloc_stacks(t_all *s, int ac)
 	s->stack_a.tab = malloc(sizeof(int) * ac - 1);
 	s->stack_b.tab = malloc(sizeof(int) * ac - 1);
 	if (!s->stack_a.tab || !s->stack_b.tab)
-		ft_quit(s, "oui", "malloc foire");
+		ft_quit(s, "Error", "malloc foire");
 	return (0);
 }
 

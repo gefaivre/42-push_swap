@@ -6,7 +6,7 @@
 /*   By: gefaivre <gefaivre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/24 22:47:40 by gefaivre          #+#    #+#             */
-/*   Updated: 2021/09/05 23:00:43 by gefaivre         ###   ########.fr       */
+/*   Updated: 2021/09/07 15:08:46 by gefaivre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ckeck_duplicates(t_all *s, int *tab, int size)
 		while (y < size)
 		{
 			if (tab[i] == tab [y] && i != y)
-				ft_quit(s, "duplicate", "");
+				ft_quit(s, "Error", "Duplicate");
 			y++;
 		}
 		i++;
