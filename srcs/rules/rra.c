@@ -18,19 +18,23 @@ void	rra(t_all *s)
 	int temp;
 	int temp1;
 
-	i = 0;
+	i = 1;
 	temp1 = s->stack_a.tab[0];
-	while (i < s->stack_a.size)
+	temp = 0;
+	if (s->stack_a.size > 0)
 	{
-		temp = s->stack_a.tab[i];
-		s->stack_a.tab[i - 1] = s->stack_a.tab[i];
-		s->stack_a.tab[i] = temp;
-		i++;
+		while (i < s->stack_a.size)
+		{
+			temp = s->stack_a.tab[i];
+			s->stack_a.tab[i - 1] = s->stack_a.tab[i];
+			s->stack_a.tab[i] = temp;
+			i++;
+		}
+		s->stack_a.tab[s->stack_a.size - 1] = temp1;
+		s->count++;
+		printf("rra\n");
+		if (s->verbose == 1)
+			print_stack(s);
 	}
-	s->stack_a.tab[s->stack_a.size - 1] = temp1;
-	s->count++;
-	printf("rra\n");
-	if (s->verbose == 1)
-		print_stack(s);
 
 }

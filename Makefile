@@ -34,7 +34,7 @@ OBJS_P=$(SRCS_P:.c=.o)
 all:$(NAME_P)
 
 $(NAME_P): $(OBJS_P)
-	$(CC) $(FLAGS) -o $(NAME_P)  $(SRCS_P)
+	$(CC) $(FLAGS) -o $(NAME_P)  $(SRCS_P) -fsanitize=address
 
 clean:
 	rm -rf *.o

@@ -18,16 +18,20 @@ void	rra_in_rrr(t_all *s)
 	int temp;
 	int temp1;
 
-	i = 0;
+	i = 1;
 	temp1 = s->stack_a.tab[0];
-	while (i < s->stack_a.size)
+	temp = 0;
+	if (s->stack_a.size > 0)
 	{
-		temp = s->stack_a.tab[i];
-		s->stack_a.tab[i - 1] = s->stack_a.tab[i];
-		s->stack_a.tab[i] = temp;
-		i++;
+		while (i < s->stack_a.size)
+		{
+			temp = s->stack_a.tab[i];
+			s->stack_a.tab[i - 1] = s->stack_a.tab[i];
+			s->stack_a.tab[i] = temp;
+			i++;
+		}
+		s->stack_a.tab[s->stack_a.size - 1] = temp1;
 	}
-	s->stack_a.tab[s->stack_a.size - 1] = temp1;
 }
 
 void	rrb_in_rrr(t_all *s)
@@ -36,16 +40,20 @@ void	rrb_in_rrr(t_all *s)
 	int temp;
 	int temp1;
 
-	i = 0;
+	i = 1;
 	temp1 = s->stack_b.tab[0];
-	while (i < s->stack_b.size)
+	temp = 0;
+	if (s->stack_b.size > 0)
 	{
-		temp = s->stack_b.tab[i];
-		s->stack_b.tab[i - 1] = s->stack_b.tab[i];
-		s->stack_b.tab[i] = temp;
-		i++;
+		while (i < s->stack_b.size)
+		{
+			temp = s->stack_b.tab[i];
+			s->stack_b.tab[i - 1] = s->stack_b.tab[i];
+			s->stack_b.tab[i] = temp;
+			i++;
+		}
+		s->stack_b.tab[s->stack_b.size - 1] = temp1;
 	}
-	s->stack_b.tab[s->stack_b.size - 1] = temp1;
 }
 
 void	rrr(t_all *s)

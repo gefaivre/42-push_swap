@@ -25,12 +25,10 @@ void	ft_quit(t_all *s, char *str, char *verbose)
 	ft_putstr_fd(str, 1);
 
 
-
-	/* if (s->stack_a.tab) */
-		/* free(s->stack_a.tab); */
-	/* if (s->stack_b.tab != 0) */
-		/* free(s->stack_b.tab);
- */
+	if (s->stack_a.tab)
+		free(s->stack_a.tab);
+	if (s->stack_b.tab != 0)
+		free(s->stack_b.tab);
 
 
 	if (s->verbose == 1)
